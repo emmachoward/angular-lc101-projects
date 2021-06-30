@@ -24,7 +24,13 @@ export class CandidatesComponent implements OnInit {
   }
 
   // Code the addToCrew function here:
-
+  addToCrew (crewmate: object) {
+    if (!this.crew.includes(crewmate)) {
+        this.crew.push(crewmate);
+    } else {
+      window.alert("Already have this crewmate!")
+    }
+  }
 
   // BONUS: Code the changeMissionName function here:
 
